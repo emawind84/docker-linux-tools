@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  tools:
+    build: tools
+    volumes:
+    - $PWD/tmp:/mnt/tmp
+
+  sphinx-build:
+    build: tools
+    volumes:
+    - ${SPHINX_DOC}:/opt/shinx/doc
+    command: /opt/sphinx/bin/sphinx-build -b html /opt/shinx/doc /opt/shinx/doc/_build/html
