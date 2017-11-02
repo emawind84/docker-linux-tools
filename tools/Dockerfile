@@ -1,4 +1,4 @@
-FROM debian:jessie-slim
+FROM debian:jessie
 LABEL maintainer="Emanuele Disco <emanuele.disco@gmail.com>"
 
 RUN set -e && \
