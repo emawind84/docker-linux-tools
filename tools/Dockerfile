@@ -25,7 +25,11 @@ RUN set -e && \
     virtualenv /opt/sphinx && \
     . /opt/sphinx/bin/activate && \
     pip install sphinx && \
-    deactivate && \
+    deactivate
+
+RUN set -e && \
+    apt-get install -y openjdk-7-jre && \
+
     # cleaning
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \
